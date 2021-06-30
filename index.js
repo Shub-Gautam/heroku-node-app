@@ -9,7 +9,8 @@ app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/main.html");
 });
 
-app.listen(3000,function(){
+const Port = process.env.Port || 3000 ;
+app.listen(Port,function(){
     console.log("Listning to the port 3000");
 });
 
